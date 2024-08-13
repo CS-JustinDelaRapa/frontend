@@ -16,12 +16,12 @@ const initialState: GameState = {
 };
 
 export const fetchGameHistory = createAsyncThunk('game/fetchHistory', async () => {
-    const response = await axios.get('http://localhost:8080/api/tictactoe/history');
+    const response = await axios.get('https://backend-fdyt.onrender.com/api/tictactoe/history');
     return response.data;
 });
 
 export const saveGameHistory = createAsyncThunk('game/saveHistory', async (gameData: any) => {
-    const response = await axios.post('http://localhost:8080/api/tictactoe/history', gameData);
+    const response = await axios.post('https://backend-fdyt.onrender.com/api/tictactoe/history', gameData);
     return response.data;
 });
 
